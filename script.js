@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
         startMousePosition.x = event.clientX;
         startMousePosition.y = event.clientY;           
     });
+
+    mapImage.addEventListener('mousedown', (event) => {
+        console.log(event.clientX, event.clientY);        
+    });
+
     document.addEventListener('dragstart', (event) => {
         startMousePosition.x = event.clientX; // Запоминаем начальную позицию мыши
         startMousePosition.y = event.clientY;
