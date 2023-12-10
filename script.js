@@ -47,11 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     mapImage.addEventListener('wheel', (event) => {
         event.preventDefault();
     
-        // Получение текущего положения курсора относительно изображения
-        const rect = mapImage.getBoundingClientRect();
-        const cursorX = event.clientX - transform.x;
-        const cursorY = event.clientY - transform.y;
-    
         // Рассчет нового масштаба
         var delta = event.deltaY > 0 ? -zoomSpeed : zoomSpeed;
         var newScale = Math.max(minScale, Math.min(scale + delta, maxScale));
