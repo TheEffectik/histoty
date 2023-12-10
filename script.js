@@ -8,13 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     var startMousePosition = { x: 0, y: 0 };
     var mapImage = document.querySelector('.map-image');
     
-    document.addEventListener('mousedown', (event) => {
-        if (event.button === 0) {
-            isDragging = true;
-            startMousePosition.x = event.clientX; // Запоминаем начальную позицию мыши
-            startMousePosition.y = event.clientY;
-        }
-    });
     
     document.addEventListener('mousemove', (event) => {
         if (isDragging) {
@@ -33,8 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
             startMousePosition.y = event.clientY;
         }
     });
+    document.addEventListener('dragstart', (event) => {
+        if (event.button === 0) {
+            isDragging = true;
+            startMousePosition.x = event.clientX; // Запоминаем начальную позицию мыши
+            startMousePosition.y = event.clientY;
+        }
+    });
     
-    document.addEventListener('mouseup', (event) => {
+    document.addEventListener('drag', (event) => {
         if (event.button === 0) {
             isDragging = false;
         }
