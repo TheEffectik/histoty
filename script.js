@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    var isDragging = false;
     var scale = 1;
     var minScale = 1;
     var maxScale = 4;
@@ -9,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var mapImage = document.querySelector('.map-image');
     
     
-    document.addEventListener('mousemove', (event) => {
-        if (isDragging) {
+    document.addEventListener('dragover', (event) => {
             // Рассчитываем смещение относительно начальной позиции мыши
             let dx = event.clientX - startMousePosition.x;
             let dy = event.clientY - startMousePosition.y;
@@ -24,22 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // Обновляем начальную позицию мыши для следующего перемещения
             startMousePosition.x = event.clientX;
             startMousePosition.y = event.clientY;
-        }
     });
     document.addEventListener('dragstart', (event) => {
         if (event.button === 0) {
-            isDragging = true;
             startMousePosition.x = event.clientX; // Запоминаем начальную позицию мыши
             startMousePosition.y = event.clientY;
         }
     });
-    
-    document.addEventListener('drag', (event) => {
-        if (event.button === 0) {
-            isDragging = false;
-        }
-    });
-    
     
     mapImage.addEventListener('wheel', (event) => {
         event.preventDefault();
