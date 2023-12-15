@@ -10,6 +10,29 @@ body h1{
     text-align: center;
 }
 
+.header {
+    background-color: rgb(3, 8, 37);
+    color: #fff;
+    padding: 20px;
+    
+    position: relative;
+    z-index: 10;
+    display: flex; /* Add this line */
+    flex-direction: row; /* Add this line */
+    justify-content: center;
+}
+.header h1 {
+    margin: 0;
+}
+.header a {
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    margin: 0 100px;
+    color: #fff;
+    text-decoration: none;
+}
+
 .map-image img {
     height: 1080px;
     object-fit: cover; /* Растягиваем карту для заполнения контейнера */
@@ -44,7 +67,7 @@ body h1{
 }
 
 .info-box {
-    z-index: 1;
+    z-index: 2;
     color: white;
     display: none;
     position: absolute;
