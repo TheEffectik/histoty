@@ -3,7 +3,7 @@ html, body {
     margin: 0; /* Убираем стандартные отступы */
     overflow: hidden; /* Убираем скроллбары */
     background-color: rgb(0,0,20);
-    color: aliceblue;
+    color: #F6F4E1;
 }
 
 body h1{
@@ -13,7 +13,7 @@ body h1{
 
 .header {
     background-color: rgb(3, 8, 37);
-    color: #fff;
+    color: #F6F4E1;
     padding: 20px;
     
     position: fixed;
@@ -33,7 +33,7 @@ body h1{
     font-size: 30px;
     justify-content: center;
     margin: 0 100px;
-    color: #fff;
+    color: #F6F4E1;
     text-decoration: none;
 }
 
@@ -72,7 +72,7 @@ body h1{
 
 .info-box {
     z-index: 2;
-    color: white;
+    color: #F6F4E1;
     display: none;
     position: absolute;
     background-color: rgb(4, 4, 56);
