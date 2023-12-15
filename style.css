@@ -10,12 +10,16 @@ body h1{
     text-align: center;
 }
 
+
 .header {
     background-color: rgb(3, 8, 37);
     color: #fff;
     padding: 20px;
     
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 10;
     display: flex; /* Add this line */
     flex-direction: row; /* Add this line */
@@ -107,3 +111,57 @@ body h1{
 .marker:hover .info-box {
     display: block;
 }
+
+/* style.css */
+
+.doc-text {
+    padding-top: 70px;
+    overflow: auto;
+    font-family: Arial, sans-serif;
+    color: #F6F4E1;
+    margin: 0 auto;
+    align-self: center;
+    text-align: center;
+    max-width: 1000px; /* максимальная ширина, подобно Google Docs */
+    /* padding: 20px; отступы вокруг текста */
+
+}
+
+.doc-text h1 {
+    color: navy;
+    font-size: 24px;
+}
+
+.doc-text h2 {
+    color: navy;
+    font-size: 20px;
+}
+
+.doc-text p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.doc-text em {
+    font-style: italic;
+}
+
+.doc-text strong {
+    font-weight: bold;
+}
+
+.doc-text ul,
+.doc-text ol {
+    margin-left: 20px;
+}
+
+.doc-text a {
+    color: blue;
+    text-decoration: none;
+}
+
+.doc-text a:hover {
+    text-decoration: underline;
+}
+
+/* Дополнительные стили по необходимости */
